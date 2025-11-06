@@ -16,7 +16,7 @@ const RecentProjects = () => {
           <div className="bg-[#000319] border-2 border-slate-900 rounded-3xl px-10 py-10 max-w-[380px]">
             <div className="rounded-2xl w-[300px] h-[180px] overflow-hidden">
               <Image
-                src={"/turbofplss.png"}
+                src={"/screenshots/turbofpl.png"}
                 alt="project-image"
                 height={250}
                 width={300}
@@ -24,9 +24,9 @@ const RecentProjects = () => {
             </div>
             <p className="font-bold text-3xl pt-8 pl-3 mb-7">Turbo FPL</p>
             <p className="text-wrap text-center text-gray-400">
-              A website that leverages the FPL API to display player and manager
-              stats, featuring a machine learning model to predict player
-              points.
+              A website made for football fans, that leverages the FPL API to
+              display player stats, featuring a machine learning model to
+              predict player points.
             </p>
             <div className="flex justify-between items-center px-2 pt-8">
               <a
@@ -46,7 +46,7 @@ const RecentProjects = () => {
               </a>
 
               <a
-                href="https://turbo-fpl.vercel.app/"
+                href="https://turbofpl.vercel.app/"
                 className="text-purple-500 font-bold hover:underline"
                 target="_blank"
               >
@@ -57,7 +57,7 @@ const RecentProjects = () => {
           <div className="bg-[#000319] border-2 border-slate-900 rounded-3xl px-10 py-10 max-w-[380px]">
             <div className="rounded-2xl w-[300px] h-[180px] overflow-hidden">
               <Image
-                src={"/knowit.png"}
+                src={"/screenshots/knowit.png"}
                 alt="project-image"
                 height={250}
                 width={300}
@@ -95,7 +95,7 @@ const RecentProjects = () => {
           <div className="bg-[#000319] border-2 border-slate-900 rounded-3xl px-10 py-10 max-w-[380px]">
             <div className="rounded-2xl w-[300px] h-[180px] overflow-hidden">
               <Image
-                src={"/irate.png"}
+                src={"/screenshots/irate.png"}
                 alt="project-image"
                 height={250}
                 width={300}

@@ -15,6 +15,7 @@ export const FloatingNav = ({
   navItems: {
     name: string;
     link: string;
+    icon?: React.ReactNode;
   }[];
   className?: string;
 }) => {
@@ -60,7 +61,7 @@ export const FloatingNav = ({
           // remove dark:border-white/[0.2] dark:bg-black bg-white border-transparent
           // change  pr-2 pl-8 py-2 to px-10 py-5
           "flex max-w-fit md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-10 inset-x-0 mx-auto px-10 py-5 rounded-lg border border-black/.1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center justify-center space-x-4",
-          className
+          className,
         )}
         style={{
           backdropFilter: "blur(16px) saturate(180%)",
@@ -69,20 +70,22 @@ export const FloatingNav = ({
           border: "1px solid rgba(255, 255, 255, 0.125)",
         }}
       >
-        {navItems.map((navItem: any, idx: number) => (
-          <div
+        {navItems.map((navItem, idx: number) => (
+          <button
+            type="button"
             key={`link=${idx}`}
             onClick={() => {
-              const id = document.getElementById(navItem.link);
+              const targetId = navItem.link.replace(/^#/, "");
+              const id = document.getElementById(targetId);
               id?.scrollIntoView({ behavior: "smooth" });
             }}
             className={cn(
-              "relative dark:text-neutral-50 items-center  flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+              "relative flex items-center space-x-1 rounded-md px-2 py-1 text-neutral-200 transition-colors duration-200 hover:text-purple-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-400",
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
-            <span className=" text-sm !cursor-pointer">{navItem.name}</span>
-          </div>
+            <span className="text-sm">{navItem.name}</span>
+          </button>
         ))}
       </motion.div>
     </AnimatePresence>

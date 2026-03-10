@@ -15,7 +15,7 @@ const projects: Project[] = [
     name: "Quantum Chess",
     image: "/screenshots/quantumChess.png",
     description:
-      "Full-stack chess web app built with React, Supabase, and Chess.Js, with real-time multiplayer where every player is asigned a rating",
+      "Full-stack chess web app built with React, Supabase, and Chess.Js, with real-time multiplayer chess gameplay, chat and move history feature.",
     github: "https://github.com/velinovjovan/Quantum-Chess",
     live: "https://quantumchessgame.vercel.app",
   },

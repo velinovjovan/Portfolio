@@ -12,6 +12,14 @@ type Project = {
 
 const projects: Project[] = [
   {
+    name: "Quantum Chess",
+    image: "/screenshots/quantumChess.png",
+    description:
+      "Full-stack chess web app built with React, Supabase, and Chess.Js, with real-time multiplayer where every player is asigned a rating",
+    github: "https://github.com/velinovjovan/Quantum-Chess",
+    live: "https://quantumchessgame.vercel.app",
+  },
+  {
     name: "Turbo FPL",
     image: "/screenshots/turbofpl.png",
     description:
@@ -36,16 +44,8 @@ const projects: Project[] = [
     live: "https://i-rate.vercel.app/",
   },
   {
-    name: "Snoopy Skies",
-    image: "/snoopy.png",
-    description:
-      "An infinite web game made with kaboomjs, inspired by flappy bird concept games. Responsive design for every device.",
-    github: "https://github.com/velinovjovan/Snoopy-Skies",
-    live: "https://snoopyskies.vercel.app/",
-  },
-  {
     name: "Brain Swift",
-    image: "/brainswiftss.png",
+    image: "/screenshots/brainswift.png",
     description:
       "A platform with interactive games to test and improve cognitive and physical performance, featuring reaction time and memory challenges.",
     github: "https://github.com/velinovjovan/BrainSwift",
@@ -53,12 +53,20 @@ const projects: Project[] = [
   },
   {
     name: "Brainwave",
-    image: "/brainwave.png",
+    image: "/screenshots/brainwave.png",
     description:
       "A sleek, responsive landing page for an AI chat company, showcasing UI/UX design and frontend skills.",
     github: "https://github.com/velinovjovan/Brainwave",
     live: "https://brainwavevelinov.vercel.app/",
   },
+  // {
+  //   name: "Snoopy Skies",
+  //   image: "/screenshots/snoopy.png",
+  //   description:
+  //     "An infinite web game made with kaboomjs, inspired by flappy bird concept games. Responsive design for every device.",
+  //   github: "https://github.com/velinovjovan/Snoopy-Skies",
+  //   live: "https://snoopyskies.vercel.app/",
+  // },
 ];
 
 const GithubIcon = () => (
@@ -121,8 +129,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
 const RecentProjects = () => {
   return (
-    <section className="bg-[#000319] py-24" id="#projects">
-      <h1 className="pb-10 text-center font-outfit text-3xl font-bold sm:text-4xl">
+    <section className="bg-[#000319] py-24" id="projects">
+      <h1 className="pb-10 text-center font-outfit text-xl sm:text-3xl font-bold sm:text-4xl">
         <span className="border-b-2 border-purple-500 pb-2">
           A small selection of{" "}
           <span className="text-purple-500">recent projects</span>

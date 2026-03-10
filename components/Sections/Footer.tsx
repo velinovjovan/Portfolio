@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer
       className="w-full bg-[#000319] px-4 pb-8 pt-16 font-outfit sm:px-8 sm:pt-20 md:px-12 lg:px-20 xl:px-28"
-      id="#contact"
+      id="contact"
     >
       <div className="mx-auto w-full max-w-6xl rounded-3xl border border-slate-800/80 bg-[#04071d]/70 px-5 py-10 text-center sm:px-8 sm:py-12 md:px-10 lg:py-14">
         <h2 className="mx-auto max-w-4xl text-2xl font-bold leading-tight text-gray-100 sm:text-3xl md:text-4xl">

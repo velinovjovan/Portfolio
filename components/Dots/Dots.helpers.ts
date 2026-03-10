@@ -8,7 +8,7 @@ export interface ILine {
 
 export const drawLines = (
   canvasRef: React.RefObject<HTMLCanvasElement>,
-  boundingRect: React.RefObject<HTMLDivElement>
+  boundingRect: React.RefObject<HTMLDivElement>,
 ) => {
   const color = "rgba(191, 64, 191, 0.2)";
   const canvas = canvasRef.current;
@@ -36,7 +36,7 @@ export function updateLine(
   x: number,
   y: number,
   xOffset: number,
-  yOffset: number
+  yOffset: number,
 ) {
   const dx = x - xOffset - line.start_x;
   const dy = y - yOffset - line.start_y;
@@ -60,7 +60,7 @@ export function updateAllLines(
   x: number,
   y: number,
   xOffset: number,
-  yOffset: number
+  yOffset: number,
 ) {
   lines.forEach((line) => {
     updateLine(line, x, y, xOffset, yOffset);
@@ -70,7 +70,7 @@ export function updateAllLines(
 export function drawLine(
   ctx: CanvasRenderingContext2D,
   line: ILine,
-  color: string
+  color: string,
 ) {
   if (line.end_x === line.start_x && line.end_y === line.start_y) {
     // Fill in a dot if the line has collapsed to a point
@@ -102,7 +102,7 @@ export function areLinesEqual(line1: ILine, line2: ILine) {
 export function drawAllLines(
   ctx: CanvasRenderingContext2D,
   lines: ILine[],
-  color: string
+  color: string,
 ) {
   lines.forEach((line) => {
     drawLine(ctx, line, color);
@@ -111,7 +111,7 @@ export function drawAllLines(
 
 export function clearCanvas(
   ctx: CanvasRenderingContext2D,
-  canvas: HTMLCanvasElement
+  canvas: HTMLCanvasElement,
 ) {
   ctx.clearRect(0, 0, canvas!.width, canvas!.height);
 }
@@ -151,7 +151,7 @@ export const getLines = (canvas: HTMLCanvasElement) => {
 export const draw = (
   ctx: CanvasRenderingContext2D,
   lines: ILine[],
-  color: string
+  color: string,
 ) => {
   ctx.beginPath();
   ctx.lineWidth = 5;
